@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Recipes</h1>
+<h1>Unicorn Recipes</h1>
 
 <table>
   <thead>
@@ -14,7 +14,8 @@
   <tbody>
     <% @recipes.each do |recipe| %>
       <tr>
-        <td><%= recipe.title %></td>
+        <td><%= image_tag recipe.avatar.url(:thumb) %></td>
+        <td><strong><%= recipe.title %><strong></td>
         <td><%= recipe.instructions %></td>
         <td><%= link_to 'Show', recipe %></td>
         <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>

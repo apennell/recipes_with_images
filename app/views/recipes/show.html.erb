@@ -1,12 +1,15 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
-  <%= @recipe.title %>
+  <strong><%= @recipe.title %></strong>
 </p>
 
 <p>
-  <strong>Instructions:</strong>
+  <%= image_tag @recipe.avatar.url(:medium) %>
+</p>
+
+<p>
+  <strong>Instructions:</strong><br>
   <%= @recipe.instructions %>
 </p>
 
